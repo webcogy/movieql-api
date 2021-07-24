@@ -1,0 +1,10 @@
+type dh {
+  nick: String!
+  age: Int!
+  gender: String!
+}
+
+type Query {
+  name: String!
+  person: dh!
+}
