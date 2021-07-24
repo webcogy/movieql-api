@@ -1,15 +1,20 @@
-const dh = {
-    nick:"webcogy",
-    age:33,
-    gender:"male"
-}
-
+import { getMovies } from "./db";
 
 const resolvers = {
     Query: {
-        name:() => 'daehyun',
-        person:() => dh
-    },
+        movies: (_, { limit, rating }) => getMovies(limit, rating)
+    }
 }
 
+export default resolvers;
+
+/* import {people, getById} from './db'
+
+const resolvers = {
+    Query: {
+        people: () => people,
+        person:(_, { id }) => getById(id)
+    },
+}
+ */
 export default resolvers;

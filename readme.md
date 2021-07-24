@@ -1,4 +1,4 @@
-# graphQL API 만들기
+# graphQL API 만들기 (movie API)
 
 참고 :
 https://byseop.netlify.app/graphql-api01/
@@ -10,6 +10,7 @@ https://www.youtube.com/watch?v=ZzHD04QTwI8
 - nodemon
 - babel-node ( import {} from '' 방식으로 파일을 불러올수 있게 해줌 )
 - babel-cli (커멘드라인에서 바벨을 실행)
+- node-fetch ( API fetch )
 
 ---
 
@@ -32,6 +33,8 @@ yarn add graphql-yoga
 yarn global add babel-cli --ignore-engines
 yarn add babel-cli babel-preset-env babel-preset-stage-3 --dev
 yarn add babel-node --dev
+
+yarn add node-fetch
 ```
 
 ---
@@ -57,3 +60,8 @@ query{
   }
 }
 ```
+
+## movies API
+
+// 인증키, 발급절차 모두 필요없는 API
+https://yts.am/api/v2/list_movies.json?

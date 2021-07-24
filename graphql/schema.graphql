@@ -1,10 +1,12 @@
-type dh {
-  nick: String!
-  age: Int!
-  gender: String!
+type Movie {
+  id: Int!
+  title: String!
+  rating: Float!
+  summary: String!
+  language: String!
+  medium_cover_image: String!
 }
 
 type Query {
-  name: String!
-  person: dh!
+  movies(limit: Int, rating: Float): [Movie]!
 }
